@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_registro">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/foto_perfil_toolbar"
+                android:layout_width="139dp"
+                android:layout_height="92dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/uglogo"
+                app:layout_constraintBottom_toTopOf="@+id/titulo1" />
+
+            <TextView
+                android:id="@+id/titulo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/foto_perfil_toolbar"
+                android:layout_centerHorizontal="true"
+                android:text="@string/vicerrectorado_de_formacion_academica"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/titulo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titulo1"
+                android:layout_centerHorizontal="true"
+                android:text="@string/asistencia_de_proyecto_de_vinculacion"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvcrearcuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titulo2"
+                android:layout_centerHorizontal="true"
+                android:text="@string/crear_cuenta"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvdpersonales"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/titulo1"
+                android:layout_below="@+id/tvcrearcuenta"
+                android:text="@string/datos_personales"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivfotoperfil"
+                android:layout_width="142dp"
+                android:layout_height="151dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvdpersonales"
+                android:contentDescription="@string/add_photo"
+                app:srcCompat="@mipmap/addphoto" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilnombre"
+                android:layout_width="wrap_content"
+                android:layout_height="51dp"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@+id/tvdpersonales"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="191dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="120dp"
+                    android:hint="@string/nombre"
+                    android:textColorHint="@color/colorPrimary"
+                    app:layout_constraintEnd_toStartOf="@+id/editText"
+                    app:layout_constraintHorizontal_bias="0.869"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilapellido"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@+id/tilnombre">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editText"
+                    android:layout_width="186dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/apellidos"
+                    android:textColorHint="@color/colorPrimary" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilfnacimiento"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@id/tilapellido">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tietfnacimiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fecha_de_nacimiento" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvgenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/titulo1"
+                android:layout_below="@id/tilfnacimiento"
+                android:text="@string/genero"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rbggenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/titulo2"
+                android:layout_below="@id/tvgenero"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbhombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hombre" />
+
+                <RadioButton
+                    android:id="@+id/rbmujer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mujer" />
+
+                <RadioButton
+                    android:id="@+id/rbotros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/otros" />
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tiltelefono"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@+id/rbggenero">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="164dp"
+                    android:hint="@string/telefono_celular"
+                    android:textColorHint="@color/colorPrimary" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilcedula"
+                android:layout_width="wrap_content"
+                android:layout_height="59dp"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@+id/tiltelefono">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="164dp"
+                    android:hint="@string/n_cedula"
+                    android:textColorHint="@color/colorPrimary" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/titulo2"
+                android:layout_below="@+id/tilcedula">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="164dp"
+                    android:drawableEnd="@android:drawable/ic_dialog_email"
+                    android:hint="@string/email"
+                    android:textColorHint="@color/colorPrimary" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilcontrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/titulo2"
+                android:layout_below="@id/tilemail">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/contrase_a" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="195dp"
+                android:layout_height="28dp"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@+id/tilcontrasena"
+                android:text="@string/datos_institucionales"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/scarrera"
+                android:layout_width="330dp"
+                android:layout_height="41dp"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@+id/textView4" />
+
+            <Spinner
+                android:id="@+id/sfacultad"
+                android:layout_width="330dp"
+                android:layout_height="41dp"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@+id/scarrera" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilproyecto"
+                android:layout_width="331dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/titulo2"
+                android:layout_below="@id/sfacultad">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputEditText"
+                    android:layout_width="345dp"
+                    android:layout_height="43dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="164dp"
+                    android:hint="@string/nombre_del_proyecto"
+                    android:textColorHint="@color/colorPrimary" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tildocente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tilproyecto">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/foto" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

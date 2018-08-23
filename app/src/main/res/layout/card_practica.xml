@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/fab_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/cardtvfecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/fecha"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvhentrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardtvfecha"
+                android:layout_toEndOf="@+id/iventrada"
+                android:layout_marginStart="10dp"
+                android:text="@string/hora_de_entrada" />
+
+            <TextView
+                android:id="@+id/cardhentrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardtvfecha"
+                android:layout_toEndOf="@+id/tvhentrada"
+                android:text="@string/hora"
+                android:layout_marginStart="10dp"/>
+
+
+            <TextView
+                android:id="@+id/tvhsalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardtvfecha"
+                android:layout_toEndOf="@+id/cardhentrada"
+                android:text="@string/hora_de_salida"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/cardhsalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardtvfecha"
+                android:layout_toEndOf="@+id/tvhsalida"
+                android:text="@string/hora"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/que_actividad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvhentrada"
+                android:text="@string/que_actividad"/>
+
+            <TextView
+                android:id="@+id/cardtvpregunta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/que_actividad"
+                android:text="@string/pregunta1" />
+
+            <TextView
+                android:id="@+id/cual_beneficio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/cardtvpregunta1"
+                android:text="@string/Cuál_beneficio"/>
+
+            <TextView
+                android:id="@+id/cardtvpregunta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cual_beneficio"
+                android:text="@string/pregunta2" />
+
+            <TextView
+                android:id="@+id/cuantos_beneficios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/cardtvpregunta2"
+                android:text="@string/cuantos_beneficiados"/>
+
+            <TextView
+                android:id="@+id/cardtvpregunta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cuantos_beneficios"
+                android:text="@string/pregunta3" />
+
+            <Button
+                android:id="@+id/btndata"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardtvpregunta3"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ver_datos"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/cardtvusuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/usuario"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvusuariopractica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/usuario"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvfotoentrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/usuario"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iventrada"
+                android:layout_width="108dp"
+                android:layout_height="147dp"
+                android:layout_alignBottom="@+id/cardtvpregunta3"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@mipmap/ic_launcher_round"
+                android:contentDescription="@string/todo"/>
+
+            <TextView
+                android:id="@+id/tvfotosalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/usuario"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ivsalida"
+                android:layout_width="108dp"
+                android:layout_height="147dp"
+                android:layout_alignBottom="@+id/cardtvpregunta3"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@mipmap/ic_launcher_round"
+                android:contentDescription="@string/todo"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

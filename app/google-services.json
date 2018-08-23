@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1049103885623",
+    "firebase_url": "https://ugpracticasbd.firebaseio.com",
+    "project_id": "ugpracticasbd",
+    "storage_bucket": "ugpracticasbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049103885623:android:274ca6ea9246fcf2",
+        "android_client_info": {
+          "package_name": "com.jerp.ugpracticas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049103885623-dk22q1mc714qqnde45hq5jnensd30fng.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jerp.ugpracticas",
+            "certificate_hash": "662bdb765456d02b0e51f5484b0e06ecc187d1c7"
+          }
+        },
+        {
+          "client_id": "1049103885623-u82r4rrolk3g2icsuj5ttl3io3bbj2mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgk_sy44XhnDNI_nmpN0aU8Am-AGXt11Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049103885623-u82r4rrolk3g2icsuj5ttl3io3bbj2mh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

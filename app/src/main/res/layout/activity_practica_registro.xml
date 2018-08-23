@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    tools:context=".activity.PracticaRegistroActivity"
+    tools:ignore="MergeRootFrame">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageView
+                android:id="@+id/foto_perfil_toolbar"
+                android:layout_width="85dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/uglogo" />
+
+            <TextView
+                android:id="@+id/tvusuariopractica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="300dp"
+                android:text="@string/usuario" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:layout_marginTop="70dp">
+
+            <TextView
+                android:id="@+id/tvfechapractica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:text="@string/fecha" />
+
+            <ImageView
+                android:id="@+id/iventrada"
+                android:layout_width="178dp"
+                android:layout_height="165dp"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/tvfechapractica"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="100dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@mipmap/addphoto" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilentrada"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/iventrada"
+                android:layout_below="@+id/iventrada">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tietentrada"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="@string/hora_de_entrada"
+                    android:inputType="time" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/ivsalida"
+                android:layout_width="178dp"
+                android:layout_height="165dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/iventrada"
+                android:layout_marginEnd="66dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@mipmap/addphoto" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilsalida"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ivsalida"
+                android:layout_below="@+id/ivsalida">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tietsalida"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="@string/hora_de_salida"
+                    android:inputType="time" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilpregunta1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tilentrada"
+                android:layout_marginTop="30dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tietpregunta1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/que_actividad"
+                    android:inputType="textMultiLine" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilpregunta2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tilpregunta1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tietpregunta2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/cuantos_beneficiados"
+                    android:inputType="textMultiLine" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilpregunta3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tilpregunta2"
+                android:layout_marginTop="-8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tietpregunta3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Cuál_beneficio"
+                    android:inputType="textMultiLine" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tilpregunta3"
+                android:layout_marginTop="100dp">
+
+                <fragment
+                    android:id="@+id/practicamap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="700dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="20dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fabmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.996"
+        app:menu_colorNormal="@color/colorPrimary">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabguardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_save"
+            android:tint="@color/cardview_light_background"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_label="@string/guardar" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabmodificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:tint="@color/cardview_light_background"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_label="Modificar" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
